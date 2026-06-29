@@ -1,0 +1,146 @@
+.techstack-section {
+  padding: var(--section-padding);
+  border-top: 1px dashed var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.techstack-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.coin-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.tech-coin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border-light);
+  cursor: default;
+  user-select: none;
+  transform: rotate(var(--rotation));
+  animation: coinFloat var(--float-duration) ease-in-out var(--float-delay) infinite alternate;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--card-shadow);
+}
+
+.tech-coin:hover {
+  transform: rotate(0deg) scale(1.12);
+  border-color: var(--accent-cyan-light);
+  box-shadow: 0 8px 25px var(--accent-cyan-glow);
+  z-index: 10;
+}
+
+.tech-logo {
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.tech-text-icon {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: -0.02em;
+}
+
+.tech-label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.coin-lg {
+  padding: 1.25rem 1.5rem;
+}
+
+.coin-lg .tech-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.coin-lg .tech-text-icon {
+  font-size: 1.4rem;
+}
+
+.coin-md {
+  padding: 1rem 1.25rem;
+}
+
+.coin-md .tech-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.coin-md .tech-text-icon {
+  font-size: 1.1rem;
+}
+
+.coin-sm {
+  padding: 0.75rem 1rem;
+}
+
+.coin-sm .tech-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.coin-sm .tech-text-icon {
+  font-size: 0.85rem;
+}
+
+.coin-sm .tech-label {
+  font-size: 0.55rem;
+}
+
+@keyframes coinFloat {
+  0% {
+    transform: rotate(var(--rotation)) translateY(0px);
+  }
+  100% {
+    transform: rotate(var(--rotation)) translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .coin-field {
+    gap: 0.75rem;
+  }
+
+  .coin-lg .tech-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .coin-md .tech-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .coin-sm .tech-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .coin-lg, .coin-md, .coin-sm {
+    padding: 0.75rem;
+  }
+}

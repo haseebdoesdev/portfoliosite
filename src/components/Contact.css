@@ -1,0 +1,211 @@
+.contact-section {
+  padding: var(--section-padding);
+  border-top: 1px dashed var(--border-light);
+  position: relative;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: pulse-ring 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.status-text {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.contact-intro {
+  margin-bottom: 2.5rem;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.channel-card:hover {
+  border-color: var(--accent-cyan-light);
+  box-shadow: 0 0 15px var(--accent-cyan-glow);
+  transform: translateY(-2px);
+  color: var(--accent-cyan);
+}
+
+.channel-card svg {
+  flex-shrink: 0;
+  color: var(--accent-cyan);
+}
+
+.channel-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.channel-value {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.channel-card:hover .channel-value {
+  color: var(--accent-cyan);
+}
+
+.form-heading {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 2px var(--accent-cyan-glow);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 0.875rem 2.5rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--accent-cyan-glow);
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
