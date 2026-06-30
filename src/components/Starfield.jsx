@@ -77,7 +77,7 @@ const Starfield = () => {
         ctx.beginPath();
         ctx.moveTo(ss.x, ss.y);
         ctx.lineTo(ss.x + Math.cos(ss.angle) * ss.length, ss.y - Math.sin(ss.angle) * ss.length);
-        ctx.strokeStyle = `rgba(186, 230, 253, ${ss.life * ss.opacity})`; // pale cyan
+        ctx.strokeStyle = `rgba(110, 231, 183, ${ss.life * ss.opacity})`;
         ctx.lineWidth = 1;
         ctx.stroke();
       }

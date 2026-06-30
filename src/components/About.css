@@ -26,7 +26,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: var(--gradient-accent);
+  background: var(--accent);
   border-radius: 1px;
 }
 
@@ -61,8 +61,8 @@
 }
 
 .stat-item:hover {
-  border-color: var(--accent-cyan-light);
-  box-shadow: 0 12px 30px -8px rgba(14, 165, 233, 0.15), 0 4px 12px -4px rgba(139, 92, 246, 0.1);
+  border-color: var(--accent-light);
+  box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15);
   transform: translateY(-4px);
 }
 
@@ -71,10 +71,7 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
   margin-bottom: 0.25rem;
 }
 

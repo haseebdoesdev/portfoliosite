@@ -10,23 +10,18 @@
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
   
-  --accent-cyan: #0ea5e9;
-  --accent-cyan-light: #bae6fd;
-  --accent-cyan-glow: rgba(14, 165, 233, 0.15);
-
-  --accent-violet: #8b5cf6;
-  --accent-violet-light: #c4b5fd;
-  --accent-violet-glow: rgba(139, 92, 246, 0.15);
-
-  --gradient-accent: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
-  --gradient-accent-soft: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(139, 92, 246, 0.1));
+  --accent: #10b981;
+  --accent-light: #6ee7b7;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --accent-soft-bg: rgba(16, 185, 129, 0.06);
+  --accent-hover: #059669;
 
   --border-light: #e2e8f0;
   --border-hover: #cbd5e1;
 
   --card-bg: rgba(255, 255, 255, 0.6);
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --card-shadow-hover: 0 10px 25px -5px rgba(14, 165, 233, 0.1), 0 8px 10px -6px rgba(139, 92, 246, 0.08);
+  --card-shadow-hover: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 8px 10px -6px rgba(16, 185, 129, 0.06);
 
   /* Fonts */
   --font-body: 'Inter', sans-serif;
@@ -109,15 +104,12 @@ main > section + section::before {
   transform: translateX(-50%);
   width: min(80%, 600px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-cyan-light), var(--accent-violet-light), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
 }
 
-/* Gradient text utility */
-.gradient-text {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Accent text utility */
+.accent-text {
+  color: var(--accent);
 }
 
 /* Shimmer animation */
@@ -134,8 +126,8 @@ main > section + section::before {
 
 /* Glow pulse */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 5px var(--accent-cyan-glow); }
-  50% { box-shadow: 0 0 20px var(--accent-cyan-glow), 0 0 40px var(--accent-violet-glow); }
+  0%, 100% { box-shadow: 0 0 5px var(--accent-glow); }
+  50% { box-shadow: 0 0 20px var(--accent-glow); }
 }
 
 /* Prefers reduced motion */

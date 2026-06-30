@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gradient-accent);
+  background: var(--accent);
   transform-origin: top;
   transform: scaleY(0);
 }
@@ -33,9 +33,9 @@
   left: -2.5px;
   width: 6px;
   height: 6px;
-  background: var(--accent-cyan);
+  background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-violet-glow);
+  box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent-glow);
   animation: orbit-pulse 4s infinite ease-in-out;
 }
 

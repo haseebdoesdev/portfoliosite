@@ -47,7 +47,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--accent-cyan);
+  color: var(--accent);
 }
 
 .footer-platforms {
@@ -86,12 +86,12 @@
 }
 
 .platform-link:hover .platform-link-icon {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(2218%) hue-rotate(166deg) brightness(97%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(583%) hue-rotate(107deg) brightness(93%) contrast(90%);
 }
 
 .platform-link:hover {
-  color: var(--accent-cyan);
-  border-color: var(--accent-cyan-light);
+  color: var(--accent);
+  border-color: var(--accent-light);
   transform: translateY(-1px);
 }
 
@@ -130,11 +130,11 @@
 }
 
 .social-links a:hover .social-icon {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(2218%) hue-rotate(166deg) brightness(97%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(583%) hue-rotate(107deg) brightness(93%) contrast(90%);
 }
 
 .social-links a:hover {
-  color: var(--accent-cyan);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 

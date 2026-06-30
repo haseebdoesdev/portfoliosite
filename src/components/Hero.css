@@ -20,12 +20,12 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--accent-cyan);
+  color: var(--accent);
   margin-bottom: 1.5rem;
-  border: 1px solid var(--accent-cyan-light);
+  border: 1px solid var(--accent-light);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  background: rgba(14, 165, 233, 0.06);
+  background: var(--accent-soft-bg);
   backdrop-filter: blur(10px);
   animation: gentle-float 4s ease-in-out infinite;
 }
@@ -34,12 +34,7 @@
   font-size: clamp(3rem, 8vw, 5rem);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 50%, var(--accent-violet) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-size: 200% auto;
-  animation: shimmer 6s linear infinite;
+  color: var(--text-primary);
 }
 
 .hero-tagline {
@@ -48,19 +43,19 @@
   max-width: 600px;
   margin-bottom: 3rem;
   line-height: 1.5;
-  min-height: 3em; /* to prevent layout shift during typing */
+  min-height: 3em;
 }
 
 .cursor {
   display: inline-block;
   width: 3px;
   height: 1.2em;
-  background: var(--gradient-accent);
+  background: var(--accent);
   vertical-align: text-bottom;
   margin-left: 4px;
   border-radius: 2px;
   animation: cursor-blink 1s step-end infinite;
-  box-shadow: 0 0 8px var(--accent-cyan-glow);
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 @keyframes cursor-blink {
@@ -83,10 +78,10 @@
 }
 
 .cta-primary {
-  background: var(--gradient-accent);
+  background: var(--accent);
   color: #fff;
   border: 1px solid transparent;
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2), 0 2px 8px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -108,7 +103,8 @@
 
 .cta-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3), 0 4px 15px rgba(139, 92, 246, 0.2);
+  background: var(--accent-hover);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
 }
 
 .cta-secondary {
@@ -118,10 +114,10 @@
 }
 
 .cta-secondary:hover {
-  background: var(--gradient-accent-soft);
-  border-color: var(--accent-cyan-light);
+  background: var(--accent-soft-bg);
+  border-color: var(--accent-light);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px -8px rgba(14, 165, 233, 0.15);
+  box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.15);
 }
 
 .cta-resume {
@@ -138,10 +134,10 @@
 }
 
 .cta-resume:hover {
-  color: var(--accent-violet);
-  border-color: var(--accent-violet-light);
+  color: var(--accent);
+  border-color: var(--accent-light);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.15);
 }
 
 @media (max-width: 768px) {
