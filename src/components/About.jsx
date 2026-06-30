@@ -1,5 +1,46 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
+
+const stats = [
+  { target: 4, suffix: '+', label: 'Years Experience' },
+  { target: 200, suffix: '+', label: 'Scrapers Built' },
+  { target: 500, suffix: '+', label: 'Community Members' },
+  { target: 10, suffix: '+', label: 'Certifications' },
+];
+
+const AnimatedCounter = ({ target, suffix }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          const duration = 1800;
+          const steps = 60;
+          const increment = target / steps;
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(current));
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return <span className="stat-number" ref={ref}>{count}{suffix}</span>;
+};
 
 const About = () => {
   return (
@@ -19,22 +60,12 @@ const About = () => {
         </div>
 
         <div className="about-stats reveal-up delay-200">
-          <div className="stat-item">
-            <span className="stat-number">4+</span>
-            <span className="stat-label">Years Experience</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">200+</span>
-            <span className="stat-label">Scrapers Built</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">500+</span>
-            <span className="stat-label">Community Members</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">10+</span>
-            <span className="stat-label">Certifications</span>
-          </div>
+          {stats.map((stat) => (
+            <div className="stat-item" key={stat.label}>
+              <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+              <span className="stat-label">{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
