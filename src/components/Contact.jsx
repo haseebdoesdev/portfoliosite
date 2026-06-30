@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -28,21 +28,21 @@ const Contact = () => {
               </div>
             </a>
             <a href="https://www.fiverr.com/s/NNvBlRV" target="_blank" rel="noopener noreferrer" className="channel-card">
-              <ExternalLink size={20} />
+              <img src="/fiverr-wordmark.svg" alt="Fiverr" className="channel-icon" />
               <div>
                 <span className="channel-label">Fiverr</span>
                 <span className="channel-value">Hire me on Fiverr</span>
               </div>
             </a>
             <a href="https://www.upwork.com/freelancers/~017c702bc7da4b5e30" target="_blank" rel="noopener noreferrer" className="channel-card">
-              <ExternalLink size={20} />
+              <img src="/upwork-icon.svg" alt="Upwork" className="channel-icon" />
               <div>
                 <span className="channel-label">Upwork</span>
                 <span className="channel-value">Hire me on Upwork</span>
               </div>
             </a>
             <a href="https://www.linkedin.com/in/abdul-haseeb-1a5803287/" target="_blank" rel="noopener noreferrer" className="channel-card">
-              <ExternalLink size={20} />
+              <img src="/linkedin-icon.svg" alt="LinkedIn" className="channel-icon" />
               <div>
                 <span className="channel-label">LinkedIn</span>
                 <span className="channel-value">Connect on LinkedIn</span>

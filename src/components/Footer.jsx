@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitBranch, Link, Mail, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -22,15 +22,15 @@ const Footer = () => {
 
         <div className="footer-platforms">
           <a href="https://www.fiverr.com/s/NNvBlRV" target="_blank" rel="noopener noreferrer" className="platform-link">
-            <ExternalLink size={14} />
+            <img src="/fiverr-wordmark.svg" alt="Fiverr" className="platform-link-icon" />
             <span>Fiverr</span>
           </a>
           <a href="https://www.upwork.com/freelancers/~017c702bc7da4b5e30" target="_blank" rel="noopener noreferrer" className="platform-link">
-            <ExternalLink size={14} />
+            <img src="/upwork-icon.svg" alt="Upwork" className="platform-link-icon" />
             <span>Upwork</span>
           </a>
           <a href="https://www.kaggle.com/abdulhaseeb266" target="_blank" rel="noopener noreferrer" className="platform-link">
-            <ExternalLink size={14} />
+            <img src="/kaggle-icon.svg" alt="Kaggle" className="platform-link-icon" />
             <span>Kaggle</span>
           </a>
         </div>
@@ -41,10 +41,10 @@ const Footer = () => {
           </p>
           <div className="social-links">
             <a href="https://github.com/haseebdoesdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <GitBranch size={20} />
+              <img src="/github-icon.svg" alt="GitHub" className="social-icon" />
             </a>
             <a href="https://www.linkedin.com/in/abdul-haseeb-1a5803287/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Link size={20} />
+              <img src="/linkedin-icon.svg" alt="LinkedIn" className="social-icon" />
             </a>
             <a href="mailto:abdlhaseeb17@gmail.com" aria-label="Email">
               <Mail size={20} />

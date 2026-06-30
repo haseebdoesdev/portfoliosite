@@ -77,6 +77,18 @@
   backdrop-filter: blur(8px);
 }
 
+.platform-link-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(500%) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+
+.platform-link:hover .platform-link-icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(2218%) hue-rotate(166deg) brightness(97%) contrast(89%);
+}
+
 .platform-link:hover {
   color: var(--accent-cyan);
   border-color: var(--accent-cyan-light);
@@ -107,6 +119,18 @@
 .social-links a {
   color: var(--text-secondary);
   transition: all 0.3s ease;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(500%) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(2218%) hue-rotate(166deg) brightness(97%) contrast(89%);
 }
 
 .social-links a:hover {

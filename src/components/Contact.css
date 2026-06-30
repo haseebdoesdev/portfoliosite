@@ -101,6 +101,18 @@
   color: var(--accent-cyan);
 }
 
+.channel-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(2218%) hue-rotate(166deg) brightness(97%) contrast(89%);
+}
+
+.channel-card:hover .channel-icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(3000%) hue-rotate(166deg) brightness(100%) contrast(95%);
+}
+
 .channel-label {
   display: block;
   font-family: var(--font-heading);
