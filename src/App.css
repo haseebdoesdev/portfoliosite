@@ -21,25 +21,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--accent-cyan);
+  background: var(--gradient-accent);
   transform-origin: top;
   transform: scaleY(0);
-  /* Animation will be driven by JS or we can do a CSS animation if we tie it to scroll, 
-     but since we want pure CSS without a scroll listener if possible... 
-     Actually, let's tie it to scroll with a tiny JS snippet in App.jsx or just leave it as a faint line for now */
 }
 
-/* Let's just make it a glowing dot that stays fixed or a dotted line */
 .scroll-progress-container::after {
   content: '';
   position: absolute;
   top: 50%;
-  left: -2px;
-  width: 5px;
-  height: 5px;
+  left: -2.5px;
+  width: 6px;
+  height: 6px;
   background: var(--accent-cyan);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-violet-glow);
   animation: orbit-pulse 4s infinite ease-in-out;
 }
 

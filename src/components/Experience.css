@@ -68,7 +68,7 @@
   width: 2px;
   flex-grow: 1;
   min-height: 40px;
-  background: linear-gradient(to bottom, var(--border-light), transparent);
+  background: linear-gradient(to bottom, var(--accent-cyan-light), var(--accent-violet-light), transparent);
   margin: 4px 0;
 }
 
@@ -80,13 +80,13 @@
   padding: 1.5rem;
   margin-bottom: 2rem;
   flex-grow: 1;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .timeline-content:hover {
   border-color: var(--accent-cyan-light);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateX(4px);
+  box-shadow: 0 15px 30px -10px rgba(14, 165, 233, 0.12), 0 5px 15px -5px rgba(139, 92, 246, 0.08);
+  transform: translateX(6px);
 }
 
 .timeline-meta {
