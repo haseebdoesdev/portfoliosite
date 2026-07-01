@@ -4,6 +4,17 @@ import './Portfolio.css';
 
 const projects = [
   {
+    id: "LOG-13",
+    title: "LeadFlow — Lead Capture & Automation",
+    category: "Full Stack / Automation",
+    status: "LIVE",
+    description: "Full-stack lead capture system with n8n-powered automation pipelines. Captures leads via a Next.js frontend, stores them in Supabase, and automatically syncs to Airtable & Google Sheets while triggering Slack alerts and Gmail follow-ups.",
+    tech: ["Next.js", "Supabase", "n8n", "Airtable", "Google Sheets", "Slack", "TypeScript"],
+    github: "https://github.com/haseebdoesdev/leadflow",
+    live: "https://leadflow-three-tau.vercel.app",
+    timestamp: "2026.07"
+  },
+  {
     id: "LOG-01",
     title: "Full-Stack ML Trading System",
     category: "AI / ML",
