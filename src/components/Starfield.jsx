@@ -89,8 +89,8 @@ const Starfield = () => {
       
       // Gradient background
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, '#f8fafc'); // bg-primary
-      gradient.addColorStop(1, '#f1f5f9'); // bg-secondary
+      gradient.addColorStop(0, '#050b14');
+      gradient.addColorStop(1, '#0a1628');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -129,13 +129,13 @@ const Starfield = () => {
           const layerOpacity = star.layer === 1 ? 0.3 : star.layer === 2 ? 0.6 : 0.9;
           const finalOpacity = star.opacity * layerOpacity;
 
-          ctx.fillStyle = `rgba(100, 116, 139, ${finalOpacity})`; // slate-500 roughly
+          ctx.fillStyle = `rgba(226, 232, 240,${finalOpacity})`; // slate-500 roughly
           ctx.beginPath();
           ctx.arc(drawX, drawY, star.size, 0, Math.PI * 2);
           ctx.fill();
         } else {
           const finalOpacity = star.opacity * (star.layer * 0.3);
-          ctx.fillStyle = `rgba(100, 116, 139, ${finalOpacity})`;
+          ctx.fillStyle = `rgba(226, 232, 240,${finalOpacity})`;
           ctx.beginPath();
           ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
           ctx.fill();

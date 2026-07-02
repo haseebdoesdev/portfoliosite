@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ExternalLink, GitBranch } from 'lucide-react';
 import { projects } from '../data/projects';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
@@ -16,11 +18,13 @@ const Portfolio = () => {
 
         <div className="mission-log-grid">
           {projects.map((project, index) => (
-            <Link
+            <div
               key={project.id}
-              to={`/project/${project.slug}`}
+              role="link"
+              tabIndex={0}
+              onClick={() => navigate(`/project/${project.slug}`)}
+              onKeyDown={e => e.key === 'Enter' && navigate(`/project/${project.slug}`)}
               className={`mission-card reveal-up delay-${(index % 4 + 1) * 100}`}
-              style={{ textDecoration: 'none' }}
             >
               <div className="mission-header">
                 <span className="mission-id">{project.id}</span>
@@ -42,15 +46,27 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="mission-footer">
-                <div className="mission-links" onClick={e => e.stopPropagation()}>
+                <div className="mission-links">
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="mission-link">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mission-link"
+                      onClick={e => e.stopPropagation()}
+                    >
                       <GitBranch size={14} />
                       <span>Source</span>
                     </a>
                   )}
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="mission-link live-link">
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mission-link live-link"
+                      onClick={e => e.stopPropagation()}
+                    >
                       <ExternalLink size={14} />
                       <span>Live Demo</span>
                     </a>
@@ -61,7 +77,7 @@ const Portfolio = () => {
                 </div>
                 <span className="mission-timestamp">TS: {project.timestamp}</span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
